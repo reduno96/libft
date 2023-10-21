@@ -6,26 +6,25 @@
 /*   By: Red-Mor <reduno96@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 17:52:16 by motivred          #+#    #+#             */
-/*   Updated: 2023/10/20 20:50:00 by Red-Mor          ###   ########.fr       */
+/*   Updated: 2023/10/21 21:14:50 by Red-Mor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-void *ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	char *str;
-	size_t i;
+	unsigned char	*str;
 
 	str = s;
-	i = 0;
-	while (i < n)
+	while (n--)
 	{
-		str[i++] = c;
+		*str++ = (unsigned char)c;
 	}
 	return (s);
 }
+
 // int main(void)
 // {
 // 	// char str[20] = "redouane el morabet";
@@ -45,7 +44,7 @@ void *ft_memset(void *s, int c, size_t n)
 // 	}
 // 	printf("\n");
 // 	int des = -1;
-// 	memset(str + 13, des, 4);
+// 	ft_memset(str + 13, des, 4);
 // 	for (int i = 0; i < 20; i++)
 // 	{
 // 		printf("myArray[%d] = %d\n", i, str[i]);
