@@ -1,39 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bzero.c                                            :+:      :+:    :+:   */
+/*   memcpy.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Red-Mor <reduno96@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 17:35:13 by motivred          #+#    #+#             */
-/*   Updated: 2023/10/24 21:00:24 by Red-Mor          ###   ########.fr       */
+/*   Created: 2023/10/21 22:15:51 by motivred          #+#    #+#             */
+/*   Updated: 2023/10/22 16:13:12 by Red-Mor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-void *ft_memset(void *s, int c, size_t n)
+void *ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char *str;
+    char *pdest;
+    const char *psrc;
 
-	str = s;
-	while (n)
-	{
-		*str++ = (unsigned char)c;
-		n--;
-	}
-	return (s);
+    pdest = dest;
+    psrc = src;
+    while (n)
+    {
+        *pdest++ = *psrc++;
+        n--;
+    }
+    return pdest;
 }
 
-void ft_bzero(void *s, size_t n)
+int main(void)
 {
-	ft_memset(s, '\0', n);
-}
+    char *src = "redouane  ";
+    char dest[20] = "el morabet";
+    int num = 3;
 
-int main()
-{
-	char str[20] = "redouane el morabet";
-	bzero(str + 13, 7);
-	printf("%s", str);
+    ft_memcpy(dest, src, num);
+    printf("%s", dest);
 }

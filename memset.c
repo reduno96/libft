@@ -6,16 +6,16 @@
 /*   By: Red-Mor <reduno96@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 17:52:16 by motivred          #+#    #+#             */
-/*   Updated: 2023/10/21 21:14:50 by Red-Mor          ###   ########.fr       */
+/*   Updated: 2023/10/21 22:37:05 by Red-Mor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-void	*ft_memset(void *s, int c, size_t n)
+void *ft_memset(void *s, int c, size_t n)
 {
-	unsigned char	*str;
+	unsigned char *str;
 
 	str = s;
 	while (n--)
