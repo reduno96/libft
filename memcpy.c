@@ -6,7 +6,7 @@
 /*   By: Red-Mor <reduno96@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 22:15:51 by motivred          #+#    #+#             */
-/*   Updated: 2023/10/25 06:51:50 by Red-Mor          ###   ########.fr       */
+/*   Updated: 2023/10/26 21:44:46 by Red-Mor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,23 @@
 
 void *ft_memcpy(void *dest, const void *src, size_t n)
 {
-    char *pdest;
-    const char *psrc;
-
-    pdest = dest;
-    psrc = src;
-    if (*pdest == '\0' || *psrc == '\0')
+    if (!dest || !src)
         return (NULL);
+    int i = 0;
     while (n--)
     {
-        *pdest++ = *psrc++;
+        ((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
+        i++;
     }
     return dest;
 }
 
-// int main(void)
-// {
-//     char *src = "redouane  ";
-//     char dest[20] = "el morabet";
-//     int num = 3;
+int main()
+{
+    char *src = "ff";
+    char dest[20] = "fd";
+    size_t num = 3;
 
-//     ft_memcpy(dest, src, num);
-//     printf("%s", dest);
-// }
+    ft_memcpy(dest, src, num);
+    printf("%s", dest);
+}

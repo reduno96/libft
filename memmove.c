@@ -1,39 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bzero.c                                            :+:      :+:    :+:   */
+/*   memmove.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Red-Mor <reduno96@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 17:35:13 by motivred          #+#    #+#             */
-/*   Updated: 2023/10/26 16:56:51 by Red-Mor          ###   ########.fr       */
+/*   Created: 2023/10/21 22:15:51 by motivred          #+#    #+#             */
+/*   Updated: 2023/10/26 15:49:19 by Red-Mor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-void *ft_mmemset(void *s, int c, size_t n)
+void *ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char *str;
+	unsigned char *pdest;
+	unsigned char *psrc;
 
-	str = s;
-	while (n)
+	pdest = (unsigned char *)dest;
+	psrc = (unsigned char *)src;
+	if (*pdest == '\0' || *psrc == '\0')
+		return (NULL);
+	while (n--)
 	{
-		*str++ = (unsigned char)c;
-		n--;
+		*pdest++ = *psrc++;
 	}
-	return (s);
+	return dest;
 }
 
-void ft_bzero(void *s, size_t n)
-{
-	ft_mmemset(s, '\0', n);
-}
-
-// int main()
+// int main(void)
 // {
-// 	char str[20] = "redouane el morabet";
-// 	bzero(str + 13, 7);
-// 	printf("%s", str);
+// 	char *src = "redouane  ";
+// 	char dest[20] = "el morabet";
+// 	size_t num = 3;
+
+// 	ft_memmove(dest, src, num);
+// 	printf("%s", dest);
 // }
