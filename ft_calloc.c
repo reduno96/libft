@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memset.c                                           :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Red-Mor <reduno96@gmail.com>               +#+  +:+       +#+        */
+/*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 17:52:16 by motivred          #+#    #+#             */
-/*   Updated: 2023/10/25 08:43:14 by Red-Mor          ###   ########.fr       */
+/*   Created: 2023/12/13 02:12:25 by rel-mora          #+#    #+#             */
+/*   Updated: 2023/12/13 02:35:24 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-void *ft_memset(void *s, int c, size_t n)
+void	*ft_calloc(size_t count, size_t size)
 {
-	unsigned char *str;
+	void	*memory;
+	size_t	len;
 
-	str = s;
-	while (n--)
-	{
-		*str++ = (unsigned char)c;
-	}
-	return (s);
+	len = count * size;
+	memory = (void *)malloc(count * size);
+	if (!memory)
+		return (NULL);
+	ft_bzero(memory, len);
+	return (memory);
 }
