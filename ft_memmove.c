@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/04 16:20:54 by rel-mora          #+#    #+#             */
-/*   Updated: 2023/12/07 15:56:04 by rel-mora         ###   ########.fr       */
+/*   Created: 2023/12/11 14:49:48 by rel-mora          #+#    #+#             */
+/*   Updated: 2023/12/11 18:22:44 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+void	*ft_memmove(void *dest, const void *src, size_t len)
 {
-	return (c >= 0 && c <= 127);
+	unsigned char	*d;
+	unsigned char	*s;
+
+	d = (unsigned char *)dest;
+	s = (unsigned char *)src;
+	if (s < d)
+	{
+		while (len--)
+			d[len] = s[len];
+	}
+	else
+		ft_memcpy(dest, src, len);
+	return (dest);
 }
