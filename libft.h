@@ -6,7 +6,7 @@
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 22:48:56 by rel-mora          #+#    #+#             */
-/*   Updated: 2023/12/13 02:33:38 by rel-mora         ###   ########.fr       */
+/*   Updated: 2023/12/13 21:39:37 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,6 @@ void		*ft_memmove(void *dst, const void *src, size_t len);
 void		*ft_memchr(const void *s, int c, size_t n);
 void		ft_bzero(void *s, size_t n);
 void		*ft_calloc(size_t count, size_t size);
+char		*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif

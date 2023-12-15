@@ -6,7 +6,7 @@
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 01:51:05 by rel-mora          #+#    #+#             */
-/*   Updated: 2023/12/13 02:09:39 by rel-mora         ###   ########.fr       */
+/*   Updated: 2023/12/15 18:37:32 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ char	*ft_strdup(const char *s1)
 	size_t	i;
 	char	*s2;
 
-	i = 0;
 	len = ft_strlen(s1);
-	s2 = malloc(len * sizeof(char) + 1);
+	s2 = (char *) malloc((len + 1) * sizeof(char));
 	if (!s2)
 		return (NULL);
+	i = 0;
 	while (s1[i])
 	{
 		s2[i] = s1[i];
@@ -31,3 +31,4 @@ char	*ft_strdup(const char *s1)
 	s2 [i] = '\0';
 	return (s2);
 }
+// gcc -fsanitize=address -g ft_strdup.c

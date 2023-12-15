@@ -6,7 +6,7 @@
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:49:48 by rel-mora          #+#    #+#             */
-/*   Updated: 2023/12/11 18:22:44 by rel-mora         ###   ########.fr       */
+/*   Updated: 2023/12/13 17:01:49 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;
+	if (!d && !s)
+		return (NULL);
 	if (s < d)
 	{
 		while (len--)
