@@ -6,7 +6,7 @@
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 22:48:56 by rel-mora          #+#    #+#             */
-/*   Updated: 2023/12/13 21:39:37 by rel-mora         ###   ########.fr       */
+/*   Updated: 2023/12/15 21:53:30 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <string.h>
 # include <stdlib.h>
+# include <stdio.h>
+# include <errno.h>
 
 int			ft_atoi(const char *str);
 int			ft_isalnum(int c);

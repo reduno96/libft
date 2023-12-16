@@ -6,7 +6,7 @@
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 21:19:50 by rel-mora          #+#    #+#             */
-/*   Updated: 2023/12/15 18:44:04 by rel-mora         ###   ########.fr       */
+/*   Updated: 2023/12/16 18:15:55 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if (start > ft_strlen(s))
 		return (ft_strdup(""));
-	if (ft_strlen(s) < len)
-		len = ft_strlen(s) + start;
+	if (ft_strlen(s+ start) <= len)
+		len = ft_strlen(s + start) ;
 	d = malloc((len + 1) * sizeof(char));
 	if (!d)
 		return (NULL);
