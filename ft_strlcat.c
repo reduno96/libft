@@ -6,7 +6,7 @@
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 11:59:38 by rel-mora          #+#    #+#             */
-/*   Updated: 2023/12/15 21:22:40 by rel-mora         ###   ########.fr       */
+/*   Updated: 2023/12/18 18:39:32 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[lendst + i] = '\0';
 	return (lendst + lensrc);
 }
-

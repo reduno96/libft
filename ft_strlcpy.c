@@ -6,7 +6,7 @@
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 22:38:28 by rel-mora          #+#    #+#             */
-/*   Updated: 2023/12/12 11:53:34 by rel-mora         ###   ########.fr       */
+/*   Updated: 2023/12/18 18:40:04 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t destsize)
 	i = 0;
 	if (destsize == 0)
 		return (len);
-	while (src[i] && i < destsize - 1)
+	while (src[i] && i < (destsize - 1))
 	{
 		dst[i] = src[i];
 		i++;
