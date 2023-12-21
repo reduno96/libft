@@ -6,7 +6,7 @@
 #    By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/11 11:13:30 by rel-mora          #+#    #+#              #
-#    Updated: 2023/12/20 22:02:33 by rel-mora         ###   ########.fr        #
+#    Updated: 2023/12/21 21:57:39 by rel-mora         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRCS = 	ft_isalpha.c ft_isdigit.c ft_isalnum.c \
 		ft_memchr.c ft_memcmp.c ft_bzero.c ft_calloc.c\
        	ft_strchr.c  ft_strrchr.c ft_strlen.c ft_strncmp.c \
 		ft_strlcpy.c ft_strlcat.c ft_strnstr.c ft_atoi.c \
-		ft_substr.c ft_strjoin.c ft_split.c \
+		ft_substr.c ft_strjoin.c ft_split.c ft_strtrim.c \
 
 OBJS = ${SRCS:.c=.o}
 

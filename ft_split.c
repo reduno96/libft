@@ -5,12 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/19 22:03:13 by rel-mora          #+#    #+#             */
-/*   Updated: 2023/12/20 22:07:15 by rel-mora         ###   ########.fr       */
+/*   Created: 2023/12/21 18:26:57 by rel-mora          #+#    #+#             */
+/*   Updated: 2023/12/21 19:12:39 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+
+static char	**free_ptrs(char **ptr, int i)
+{
+	while (i > 0)
+	{
+		i--;
+		free(ptr[i]);
+	}
+	free(ptr);
+	return (0);
+}
 
 static int	count_world(char const	*s, char c)
 {
@@ -32,50 +44,30 @@ static int	count_world(char const	*s, char c)
 	}
 	return (count);
 }
-int	len_world(char const *s, char c)
+
+static int	len_world(char const *s, char c)
 {
 	int	i;
-	int	len_world;
 
-	len_world = 0;
 	i = 0;
-
-	while (s[i])
-	{
-		while (s[i] == c && s[i])
-			i++;
-		while (s[i] != c && s[i])
-		{
-			len_world++;
-			i++;
-		}
-
-		return (len_world);
-	}
-	return (0);
+	while (s[i] != c && s[i])
+		i++;
+	return (i);
 }
 
-char	**ft_split(char const *s, char c)
+static char	**ft_fill(char const *s, char c, char **str)
 {
-	int		count;
-	char	**str;
-	int		i;
-	int		j;
+	int	i;
+	int	j;
 
 	i = 0;
-	if (!s)
-		return (NULL);
-	count = count_world(s, c);
-	str = (char **) malloc((count + 1) * sizeof(char *));
-	if (!str)
-		return (NULL);
 	while (*s)
 	{
 		if (*s != c && *s)
 		{
-			str[i] = malloc (len_world(s, c) + 1);
+			str[i] = (char *) malloc ((len_world(s, c) + 1) * sizeof(char));
 			if (!str[i])
-				return (NULL);
+				return (free_ptrs(str, i));
 			j = 0;
 			while (*s != c && *s)
 			{
@@ -88,5 +80,20 @@ char	**ft_split(char const *s, char c)
 			s++;
 	}
 	str[i] = NULL;
+	return (str);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	int		count;
+	char	**str;
+
+	if (!s)
+		return (NULL);
+	count = count_world(s, c);
+	str = (char **) malloc((count + 1) * sizeof(char *));
+	if (!str)
+		return (NULL);
+	str = ft_fill(s, c, str);
 	return (str);
 }
