@@ -6,7 +6,7 @@
 /*   By: Red-Mor <reduno96@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:03:13 by rel-mora          #+#    #+#             */
-/*   Updated: 2023/12/21 15:43:30 by Red-Mor          ###   ########.fr       */
+/*   Updated: 2023/12/21 16:05:36 by Red-Mor          ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -32,7 +32,7 @@ static int	count_world(char const	*s, char c)
 	}
 	return (count);
 }
-static int	len_world(char const *s, char c)
+int	len_world(char const *s, char c)
 {
 	int	i;
 	int	len_world;
@@ -55,13 +55,12 @@ static int	len_world(char const *s, char c)
 	return (0);
 }
 
-static char **fill_str(char const *s, char c, char **str)
+char **ft_fill(char const *s, char c, char **str)
 {
 	int i;
 	int j;
 	
 	i = 0;
-	j = 0;
 	while (*s)
 	{
 		if (*s != c && *s)
@@ -87,17 +86,14 @@ char	**ft_split(char const *s, char c)
 {
 	int		count;
 	char	**str;
-	int		i;
-	int		j;
 
-	i = 0;
 	if (!s)
 		return (NULL);
 	count = count_world(s, c);
 	str = (char **) malloc((count + 1) * sizeof(char *));
 	if (!str)
 		return (NULL);
-	str = fill_str(s, c, str);
-	str[i] = NULL;
+	str = ft_fill(s, c, str);
+	str[count] = NULL;
 	return (str);
 }
