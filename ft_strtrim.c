@@ -6,7 +6,7 @@
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 19:46:11 by rel-mora          #+#    #+#             */
-/*   Updated: 2023/12/21 22:44:40 by rel-mora         ###   ########.fr       */
+/*   Updated: 2023/12/21 22:57:27 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,3 +45,21 @@ char	*ft_strtrim(char const *s1, char const *set)
 	k = j - i;
 	return (ft_substr(s1, i, k));
 }
+/* char *ft_strtrim(char const *s1, char const *set)
+{
+    size_t start, end, len;
+
+    if (!s1 || !set)
+        return NULL;
+
+    start = 0;
+    while (s1[start] && strchr(set, s1[start]))
+        start++;
+
+    end = strlen(s1);
+    while (end > start && strchr(set, s1[end - 1]))
+        end--;
+
+    len = end - start;
+    return strndup(s1 + start, len);
+} */
