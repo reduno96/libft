@@ -6,11 +6,22 @@
 /*   By: Red-Mor <reduno96@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:03:13 by rel-mora          #+#    #+#             */
-/*   Updated: 2023/12/21 16:05:36 by Red-Mor          ###   ########.fr       */
+/*   Updated: 2023/12/21 16:49:13 by Red-Mor          ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
 #include "libft.h"
+
+static char **free_ptrs(char **ptr, int i)
+{
+	while (i > 0)
+	{
+		i--;
+		free(ptr[i]);
+	}
+	free(ptr);
+	return (0);
+}
 
 static int	count_world(char const	*s, char c)
 {
@@ -32,7 +43,7 @@ static int	count_world(char const	*s, char c)
 	}
 	return (count);
 }
-int	len_world(char const *s, char c)
+static int	len_world(char const *s, char c)
 {
 	int	i;
 	int	len_world;
@@ -55,7 +66,7 @@ int	len_world(char const *s, char c)
 	return (0);
 }
 
-char **ft_fill(char const *s, char c, char **str)
+static char **ft_fill(char const *s, char c, char **str)
 {
 	int i;
 	int j;
@@ -65,9 +76,9 @@ char **ft_fill(char const *s, char c, char **str)
 	{
 		if (*s != c && *s)
 		{
-			str[i] = malloc (len_world(s, c) + 1);
-			if (!str[i])
-				return (NULL);
+			str[i] = (char *) malloc ((len_world(s, c) + 1) * sizeof(char));
+			if (!str)
+				return (free_ptrs(str, i));
 			j = 0;
 			while (*s != c && *s)
 			{
