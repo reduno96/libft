@@ -48,29 +48,3 @@ char *ft_itoa(int n)
     }
     return (str);
 }
-
-
-#include <stdio.h>
-
-int main(void)
-{
-    char *str;
-
-    str = ft_itoa(123456);
-    printf("123456 as a string: %s\n", str);
-    free(str);
-
-    str = ft_itoa(-123456);
-    printf("-123456 as a string: %s\n", str);
-    free(str);
-
-    str = ft_itoa(0);
-    printf("0 as a string: %s\n", str);
-    free(str);
-
-    str = ft_itoa(-2147483648);
-    printf("-2147483648 as a string: %s\n", str);
-    free(str);
-
-    return 0;
-}
