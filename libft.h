@@ -6,7 +6,7 @@
 /*   By: Red-Mor <reduno96@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 22:48:56 by rel-mora          #+#    #+#             */
-/*   Updated: 2023/12/23 14:37:32 by Red-Mor          ###   ########.fr       */
+/*   Updated: 2023/12/24 00:05:37 by Red-Mor          ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -48,5 +48,6 @@ char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
 char		**ft_split(char const *s, char c);
 char		*ft_strtrim(char const *s1, char const *set);
-
+char        *ft_strmapi(char const *s, char (*f) (unsigned int, char));
+void        ft_striteri(char *s, void (*f)(unsigned int, char*));
 #endif
