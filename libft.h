@@ -6,17 +6,18 @@
 /*   By: Red-Mor <reduno96@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 22:48:56 by rel-mora          #+#    #+#             */
-/*   Updated: 2023/12/24 00:05:37 by Red-Mor          ###   ########.fr       */
+/*   Updated: 2023/12/24 02:00:02 by Red-Mor          ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <string.h>
+# include <stddef.h>
+# include <stdlib.h>
 # include <stdlib.h>
 # include <stdio.h>
-# include <errno.h>
+# include <unistd.h>
 
 int			ft_atoi(const char *str);
 char		*ft_itoa(int n);
@@ -50,4 +51,8 @@ char		**ft_split(char const *s, char c);
 char		*ft_strtrim(char const *s1, char const *set);
 char        *ft_strmapi(char const *s, char (*f) (unsigned int, char));
 void        ft_striteri(char *s, void (*f)(unsigned int, char*));
+void        ft_putchar_fd(char c, int fd);
+void        ft_putstr_fd(char const *s, int fd);
+void        ft_putendl_fd(char const *s, int fd);
+
 #endif
