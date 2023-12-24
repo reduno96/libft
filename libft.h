@@ -6,7 +6,7 @@
 /*   By: Red-Mor <reduno96@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 22:48:56 by rel-mora          #+#    #+#             */
-/*   Updated: 2023/12/24 02:00:02 by Red-Mor          ###   ########.fr       */
+/*   Updated: 2023/12/24 15:36:08 by Red-Mor          ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -54,5 +54,5 @@ void        ft_striteri(char *s, void (*f)(unsigned int, char*));
 void        ft_putchar_fd(char c, int fd);
 void        ft_putstr_fd(char const *s, int fd);
 void        ft_putendl_fd(char const *s, int fd);
-
+void        ft_putnbr_fd(int n, int fd);
 #endif
