@@ -1,33 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/24 18:54:51 by rel-mora          #+#    #+#             */
+/*   Updated: 2023/12/24 18:55:21 by rel-mora         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-    unsigned int i;
+	unsigned int	i;
 
-    if (!s || !f)
-        return ;
-    i = 0;
-    while (s[i])
-    {
-        f(i, &s[i]);
-        i++;
-    }
+	if (!s || !f)
+		return ;
+	i = 0;
+	while (s[i])
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
-/* #include <stdio.h>
-#include <ctype.h>
-
-void upper_at_odd_index(unsigned int index, char *c)
-{
-    if (index % 2 != 0)
-        *c = toupper(*c);
-}
-
-int main(void)
-{
-    char s[] = "hello, world!";
-    ft_striteri(s, upper_at_odd_index);
-    printf("%s\n", s);
-
-    return 0;
-} */

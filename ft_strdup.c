@@ -6,7 +6,7 @@
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 01:51:05 by rel-mora          #+#    #+#             */
-/*   Updated: 2023/12/15 18:37:32 by rel-mora         ###   ########.fr       */
+/*   Updated: 2023/12/24 18:54:35 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,3 @@ char	*ft_strdup(const char *s1)
 	s2 [i] = '\0';
 	return (s2);
 }
-// gcc -fsanitize=address -g ft_strdup.c
