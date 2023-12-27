@@ -1,25 +1,20 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Red-Mor <reduno96@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 12:41:58 by rel-mora          #+#    #+#             */
-/*   Updated: 2023/12/25 20:11:24 by rel-mora         ###   ########.fr       */
+/*   Updated: 2023/12/27 18:04:03 by Red-Mor          ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
 
-//#include "libft.h"
-# include <stdio.h>
+#include "libft.h"
+
+/* # include <stdio.h>
 # include <unistd.h>
-# include <stdlib.h>
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}t_list;
-
+# include <stdlib.h> */
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (new || lst)
@@ -28,7 +23,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 		*lst = new;
 	}
 }
-
+/* 
 int main ()
 {
 
@@ -63,4 +58,4 @@ int main ()
 		printf("%s \n",(char *)temp1->content);
 		temp1= temp1->next;
 	}
-}
+} */
