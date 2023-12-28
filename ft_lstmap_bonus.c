@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/28 11:49:26 by rel-mora          #+#    #+#             */
-/*   Updated: 2023/12/28 12:15:25 by rel-mora         ###   ########.fr       */
+/*   Created: 2023/12/28 14:50:49 by rel-mora          #+#    #+#             */
+/*   Updated: 2023/12/28 15:46:51 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,18 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new;
 	t_list	*temp;
+	void	*new_content;
 
 	if (!lst || !f || !del)
 		return (NULL);
 	new = NULL;
 	while (lst != NULL)
 	{
-		temp = ft_lstnew(f(lst->content));
+		new_content = f(lst->content);
+		temp = ft_lstnew(new_content);
 		if (!temp)
 		{
+			del(new_content);
 			ft_lstclear(&new, del);
 			return (NULL);
 		}
