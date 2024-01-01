@@ -6,26 +6,26 @@
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 11:50:54 by rel-mora          #+#    #+#             */
-/*   Updated: 2023/12/11 22:24:47 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/01/01 18:46:40 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	char	d;
 	int		i;
 
 	d = (char) c;
 	i = 0;
-	while (str[i])
+	while (s[i])
 	{
-		if (str[i] == d)
-			return ((char *) str + i);
+		if (s[i] == d)
+			return ((char *) s + i);
 		i++;
 	}
 	if (d == '\0')
-		return ((char *) str + i);
-	return (0);
+		return ((char *) s + i);
+	return (NULL);
 }

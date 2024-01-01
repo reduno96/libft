@@ -6,18 +6,18 @@
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:49:48 by rel-mora          #+#    #+#             */
-/*   Updated: 2023/12/13 17:01:49 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/01/01 18:37:03 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char	*d;
 	unsigned char	*s;
 
-	d = (unsigned char *)dest;
+	d = (unsigned char *)dst;
 	s = (unsigned char *)src;
 	if (!d && !s)
 		return (NULL);
@@ -27,6 +27,6 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 			d[len] = s[len];
 	}
 	else
-		ft_memcpy(dest, src, len);
-	return (dest);
+		ft_memcpy(dst, src, len);
+	return (dst);
 }

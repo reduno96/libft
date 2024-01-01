@@ -6,23 +6,23 @@
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 21:56:13 by rel-mora          #+#    #+#             */
-/*   Updated: 2023/12/13 15:55:36 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/01/01 18:37:46 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *str, int c, size_t len)
+void	*ft_memset(void *b, int c, size_t len)
 {
 	unsigned char	*ptr;
 	size_t			i;
 
-	ptr = (unsigned char *)str;
+	ptr = (unsigned char *)b;
 	i = 0;
 	while (i < len)
 	{
 		ptr[i] = (unsigned char)c;
 		i++;
 	}
-	return (str);
+	return (b);
 }

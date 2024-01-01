@@ -6,7 +6,7 @@
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 19:41:28 by rel-mora          #+#    #+#             */
-/*   Updated: 2023/12/11 22:46:07 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/01/01 18:33:38 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,21 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char	*sone;
-	unsigned char	*stwo;
+	unsigned char	*s_one;
+	unsigned char	*s_two;
 	size_t			i;
 
-	sone = (unsigned char *) s1;
-	stwo = (unsigned char *) s2;
+	s_one = (unsigned char *) s1;
+	s_two = (unsigned char *) s2;
 	i = 0;
 	if (n == 0)
 		return (0);
 	while (i < n - 1)
 	{
-		if (sone[i] == stwo[i])
+		if (s_one[i] == s_two[i])
 			i++;
 		else
 			break ;
 	}
-	return (sone[i] - stwo[i]);
+	return (s_one[i] - s_two[i]);
 }
