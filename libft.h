@@ -1,14 +1,14 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Red-Mor <reduno96@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 22:48:56 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/01/01 19:48:52 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/01/02 16:39:02 by Red-Mor          ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
 
 #ifndef LIBFT_H
 # define LIBFT_H
@@ -38,7 +38,6 @@ int			ft_memcmp(const void *s1, const void *s2, size_t n);
 size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t		ft_strlcat(char *dst, const char *src, size_t dstsize);
 int			ft_tolower(int c);
-int			ft_toupper(int c);
 char		*ft_strchr(const char *s, int c);
 char		*ft_strrchr(const char *s, int c);
 char		*ft_strdup(const char *s1);
