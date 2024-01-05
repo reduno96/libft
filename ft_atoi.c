@@ -6,7 +6,7 @@
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 19:55:27 by rel-mora          #+#    #+#             */
-/*   Updated: 2023/12/13 01:35:34 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/01/05 19:09:07 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	size_t	i;
-	size_t	sign;
-	size_t	result;
+	int	i;
+	int	sign;
+	int	result;
 
 	i = 0;
 	sign = 1;
