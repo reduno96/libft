@@ -6,7 +6,7 @@
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 18:48:18 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/01/01 19:32:11 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/01/05 22:05:05 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	j = 0;
 	if (!s1 || !s2)
 		return (NULL);
-	d = (char *) malloc(((ft_strlen(s1) + ft_strlen(s2)) + 1) * sizeof(char));
+	d = malloc(((ft_strlen(s1) + ft_strlen(s2)) + 1) * sizeof(char));
 	if (!d)
 		return (NULL);
 	while (s_one[i])

@@ -6,7 +6,7 @@
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 19:55:27 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/01/05 20:19:14 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/01/07 11:41:03 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_atoi(const char *str)
 {
 	int	i;
 	int	sign;
-	int	result;
+	long	result;
 
 	i = 0;
 	sign = 1;
@@ -34,5 +34,5 @@ int	ft_atoi(const char *str)
 		result = (result * 10) + (str[i] - '0');
 		i++;
 	}
-	return (result * sign);
+	return ((int)(result * sign));
 }

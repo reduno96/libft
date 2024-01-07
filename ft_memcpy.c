@@ -6,7 +6,7 @@
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 11:19:18 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/01/01 18:36:28 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/01/05 22:40:17 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		d[i] = s[i];
 		i++;
 	}
-	return ((void *)dst);
+	return (dst);
 }
