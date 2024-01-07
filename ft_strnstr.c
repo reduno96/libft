@@ -6,7 +6,7 @@
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 20:51:21 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/01/07 15:30:32 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/01/07 16:52:38 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
 	size_t	length_needle;
+
 	i = 0;
-	if (needle[i] == 0)
+	if (needle[i] == '\0')
 		return ((char *)haystack);
 	if (len <= 0 || haystack[i] == '\0')
 		return (NULL);
