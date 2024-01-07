@@ -2,8 +2,7 @@
 #include <stdio.h>
 int main()
 {
-    char *s;
-
-    s = ft_calloc (-1, 2);
-    printf("%p", s);
+    char string []= "redouane";
+    char needle [] = "dou";
+    char * result = ft_strnstr(0, 0)
 }

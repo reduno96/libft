@@ -6,7 +6,7 @@
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 19:40:57 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/01/07 12:40:31 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/01/07 15:01:46 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	k = j - i + 1;
 	return (ft_substr(s1, i, k));
 }
-
