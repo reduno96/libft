@@ -6,20 +6,20 @@
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 19:40:57 by rel-mora          #+#    #+#             */
-/*   Updated: 2023/12/24 19:46:31 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/01/07 12:40:31 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_iset(char const *s, char c)
+static int	ft_isset(char const *set, char c)
 {
 	int	i;
 
 	i = 0;
-	while (s[i])
+	while (set[i])
 	{
-		if (s[i] == c)
+		if (set[i] == c)
 			return (1);
 		i++;
 	}
@@ -35,11 +35,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	if (!s1 || !set)
 		return (NULL);
-	while (s1[i] && ft_iset(set, s1[i]))
+	while (s1[i] && ft_isset(set, s1[i]))
 		i++;
 	j = ft_strlen(s1) - 1;
-	while (j > i && ft_iset(set, s1[j]))
+	while (j > i && ft_isset(set, s1[j]))
 		j--;
 	k = j - i + 1;
 	return (ft_substr(s1, i, k));
 }
+
