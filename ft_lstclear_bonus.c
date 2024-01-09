@@ -6,7 +6,7 @@
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/28 11:51:59 by rel-mora          #+#    #+#             */
-/*   Updated: 2023/12/28 11:52:33 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/01/09 14:46:24 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	t_list	*temp;
+	t_list	*head;
 
 	if (!lst || !del)
 		return ;
 	while (*lst != NULL)
 	{
-		temp = (*lst)->next;
+		head = (*lst)->next;
 		ft_lstdelone(*lst, del);
-		*lst = temp;
+		*lst = head;
 	}
 }
